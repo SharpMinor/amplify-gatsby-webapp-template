@@ -9,8 +9,6 @@
 // Import custom styles
 import './src/styles/global.css'
 
-import React from 'react'
-
 //Amplify imports
 import Amplify, { Hub } from '@aws-amplify/core'
 
@@ -22,7 +20,7 @@ import { ConfigKeys, AmplifyConfig } from '@project/customer-app-service'
 
 // API components imports
 import RootWrapper from './src/components/core/RootWrapper'
-import AppShell from './src/components/api/AppShell'
+import PageRoot from './src/components/core/PageRoot'
 
 // To enable service worker, uncomment the code block below
 /*
@@ -99,8 +97,4 @@ export const onClientEntry = () => {
 
 export const wrapRootElement = RootWrapper
 
-export const wrapPageElement = ({ element, props }) => {
-  if (props.location.pathname.match(/^\/app/)) {
-    return <AppShell {...props}>{element}</AppShell>
-  }
-}
+export const wrapPageElement = PageRoot

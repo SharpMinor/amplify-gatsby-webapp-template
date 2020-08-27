@@ -10,12 +10,8 @@ import React from 'react'
 
 // API components imports
 import RootWrapper from './src/components/core/RootWrapper'
-import AppShell from './src/components/api/AppShell'
+import PageRoot from './src/components/core/PageRoot'
 
 export const wrapRootElement = RootWrapper
 
-export const wrapPageElement = ({ element, props }) => {
-  if (props.location.pathname.match(/^\/app/)) {
-    return <AppShell {...props}>{element}</AppShell>
-  }
-}
+export const wrapPageElement = PageRoot

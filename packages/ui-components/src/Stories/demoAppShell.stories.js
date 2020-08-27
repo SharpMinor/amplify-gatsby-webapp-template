@@ -1,6 +1,7 @@
 import React from "react";
 import { DemoAppShell, DemoMuiTheme } from "@project/ui-components";
 import { ThemeProvider } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
 import styled from "styled-components";
 import "@storybook/addon-console";
 
